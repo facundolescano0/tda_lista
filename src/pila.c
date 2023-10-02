@@ -12,7 +12,7 @@ pila_t *pila_apilar(pila_t *pila, void *elemento)
 	if (!pila)
 		return NULL;
 	lista_t *lpila = (lista_t *)pila;
-	lista_insertar(lpila, elemento);
+	lista_insertar_en_posicion(lpila, elemento, 0);
 	return pila;
 }
 
@@ -21,7 +21,7 @@ void *pila_desapilar(pila_t *pila)
 	if (!pila)
 		return NULL;
 	lista_t *lpila = (lista_t *)pila;
-	return lista_quitar(lpila);
+	return lista_quitar_de_posicion(lpila, 0);
 }
 
 void *pila_tope(pila_t *pila)
@@ -29,7 +29,7 @@ void *pila_tope(pila_t *pila)
 	if (!pila)
 		return NULL;
 	lista_t *lpila = (lista_t *)pila;
-	return lista_ultimo(lpila);
+	return lista_primero(lpila);
 }
 
 size_t pila_tamanio(pila_t *pila)

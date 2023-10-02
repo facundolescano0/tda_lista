@@ -68,5 +68,5 @@ Cabe destacar que la principal diferencia entre la complejidad de lista simpleme
 Complejidad de las operaciones implementadas para la pila y la cola.
 Las complejidades de las operaciones tanto de pila como de cola seran todas O(1).
 Para encolar y desencolar se realiza un reajuste de punteros. Para cola_tamanio y cola_vacia se chequea la cantidad de elementos que hay y para devolver el frente se utiliza la refencia al inicio de la cola.
-Para la pila, apilar y desapilar se realiza un ajuste de punteros de nodos tambien. Para el tamaño y chequear si esta vacia se mira la cantidad de elementos y para conocer el tope se hace accede al puntero final de la pila.
+Para la pila, para apilar y desapilar se realiza un ajuste de punteros de nodos tambien, para que esto sea posible se apila y se desapila al inicio. Para el tamaño y chequear si esta vacia se mira la cantidad de elementos y para conocer el tope se hace accede al puntero final de la pila.
 Para la DESTRUCCION, tanto de pila de cola, se recorreran todos los nodos de cada TDA actual y se usaran auxiliares para no poder los punteros siguientes a cada nodo destruido. La complejidad paa destruir sera de O(n).  
