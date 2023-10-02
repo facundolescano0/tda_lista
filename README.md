@@ -23,14 +23,24 @@ valgrind ./pruebas_chanutron
 En este programa se implemento un TDA lista, usando nodos simplemente enlazadas. La lista refiere a una cantidad, un nodo simplemente enlazado al nodo inicio y otro al nodo final. Este TDA fue reutilizado en la implementacion de Cola y Pila a traves de unos casteos. 
 En esta implementacion se crea una lista reservando memoria para ocupar la estructura lista y antes de insertar cada nodo a la lista se reseravaba memoria previamente. Para los casos de insertar en ultima posicion se usaba la referencia directa gracias al facil acceso y se modificaba los punteros del inicio de la lista. En otros casos como insertar en posicion, buscar elemento en posicion o quitar de posicion se debe iterar hasta encontrar el elemento, guardando en una variable auxiliar para luego tener acceso al elemento encontrado. Se creo un iterador interno y otro externo. El primero con opcion de que el user ponga una condicion de corte y el segundo totalmente externo, con unas opareciones que le permitan iterar, como iterador_tiene_siguiente, avanzar y elemento corriente, y una estructura especifica para poder guardar la lista a iterar y el elemento que se esta iterando.
 
+Abstraccion de la memoria usada por lista:
+![](https://github.com/facundolescano0/tda_lista/blob/entrega/diagramas_tda/Lista_memoria.jpeg)
+
 Tanto pila como cola fueron implementados con la reutilizacion de operaciones de lista. Usando casteos para modificar el tipo de dato.
+Abstraccion de la memoria usada por cola:
+![](https://github.com/facundolescano0/tda_lista/blob/entrega/diagramas_tda/Cola_memoria.jpeg)
+Abstraccion de la memoria usada por pila:
+![](https://github.com/facundolescano0/tda_lista/blob/entrega/diagramas_tda/Pila_memoria.jpeg)
 
 
 ## Respuestas a las preguntas teóricas
 Tanto lista, como pila y cola son TDAs. Los TDAs son tipos de datos abstractos que estan definidos por el conjunto de todos los valores posibles que pueden contener y las operaciones que pueden utilizar.
 La lista agrupa elementos los cuales cada uno de ellos tienen predecesor y sucesor (excepto en casos bases). En este caso se utilizo una lista simplemente enlazada en la cual esta conectada por "nodos simples"(tipo de dato el cual contiene un elemento y un puntero al siguiente elemento). Donde cada nodo apunta al siguiente y la lista se refiere al primer nodo, al final y una cantidad de elementos.
+![](https://github.com/facundolescano0/tda_lista/blob/entrega/diagramas_tda/Lista_teorico.jpeg)
 La pila agrupa elementos de forma LIFO, basada en que lo ultimo que entra es lo primero en salir.
+![](https://github.com/facundolescano0/tda_lista/blob/entrega/diagramas_tda/Pila_teorico.jpeg)
 La cola, al igual que los anteriores TDAs agrupa elementos de forma FIFO. Es decir, lo primero que entra es lo primero que sale.
+![](https://github.com/facundolescano0/tda_lista/blob/entrega/diagramas_tda/Cola_teorico.jpeg)
 Cabe aclarar que lo llamado agrupar elementos en esta implementacion son nodos simplemente enlazados los cuales contienen un elemento y un puntero al siguiente nodo(o a NULL).
 
 lista simplemente enlazada, doblemente enlazada y vector dinámico para las operaciones:
